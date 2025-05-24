@@ -1,0 +1,136 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+
+
+/* 
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+.center-container{
+ background-color: white;
+ width: 20rem;
+ height: 25rem;
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-around;
+  border-radius: 10px;
+}
+
+.back-ground{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#uderid{
+  width: 15rem;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 15px; 
+}
+
+#password{
+  width: 15rem;
+  height: 50px;
+  border-radius:5px;
+  padding-left: 15px; 
+}
+
+#button{
+  color: black;
+  width: 15rem;
+  align-content: center;
+  font-size: larger;
+  height: 50px;
+  border: 2px solid black;
+  background-color: #ebeee6;
+  border-radius:5px;
+  
+}
+#button:hover{
+  background-color: rgb(143, 224, 143);
+}
+
+.home{
+  height: 100%;
+  background-color: rgb(21, 20, 20);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.room-btn{
+  width: 15rem;
+}
+
+.join-btn{
+  background-color: rgb(46, 44, 44);
+  color: aliceblue;
+  font-size: large;
+  border: 2px solid white;
+}
+
+#input-room-id{
+  width:35rem;
+  height: 2.5rem;
+  font-size: large;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.flex-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
