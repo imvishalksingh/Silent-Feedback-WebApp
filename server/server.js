@@ -1,17 +1,23 @@
-// server.js
 const express = require("express");
 const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: "hhttps://silent-feedback-web-app-1vkf.vercel.app/", // change to your Vercel frontend URL
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
-  },
+    origin: "https://silent-feedback-web-app-1vkf.vercel.app/", // same here
+    methods: ["GET", "POST"],
+    credentials: true
+  }
 });
 
 io.on("connection", (socket) => {
@@ -24,7 +30,7 @@ io.on("connection", (socket) => {
 
   socket.on("send_feedback", (data) => {
     console.log("Feedback received:", data);
-    io.to(data.roomId).emit("new_feedback", data); // send to all in room
+    io.to(data.roomId).emit("new_feedback", data);
   });
 
   socket.on("disconnect", () => {
@@ -32,6 +38,7 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3001, () => {
-  console.log("Socket server running on http://localhost:3001");
+const PORT = process.env.PORT || 3001;
+server.listen(PORT, () => {
+  console.log(`Socket server running on port ${PORT}`);
 });
