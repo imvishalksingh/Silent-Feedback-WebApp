@@ -6,7 +6,7 @@ const { Server } = require("socket.io");
 const app = express();
 
 app.use(cors({
-  origin: "hhttps://silent-feedback-web-app-1vkf.vercel.app/", // change to your Vercel frontend URL
+  origin: "https://silent-feedback-web-app.vercel.app", // change to your Vercel frontend URL
   methods: ["GET", "POST"],
   credentials: true
 }));
@@ -14,7 +14,7 @@ app.use(cors({
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://silent-feedback-web-app-1vkf.vercel.app/", // same here
+    origin: "https://silent-feedback-web-app.vercel.app", // same here
     methods: ["GET", "POST"],
     credentials: true
   }
